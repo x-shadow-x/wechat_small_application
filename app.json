@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/menu_list/menu_list",
+    "pages/store_list/store_list",
+    "pages/user/user",
+    "pages/my_order/my_order"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#DD403B",
+    "navigationBarTitleText": "SHENZHEN EAT",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#DD403B",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "Home",
+      "iconPath": "pages/imgs/home.png",
+      "selectedIconPath": "pages/imgs/home_active.png"
+    },{
+      "pagePath": "pages/user/user",
+      "text": "user",
+      "iconPath": "pages/imgs/user.png",
+      "selectedIconPath": "pages/imgs/user_active.png"
+    }]
+  }
+}

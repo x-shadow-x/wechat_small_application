@@ -1,0 +1,21 @@
+<view class="content">
+
+  <view class="list">
+    
+  </view>
+  <view wx:for="{{storeList}}" class="list_item" wx:key="{{index}}">
+    {{index}}:{{item.message}}
+    <image src="item.src"></image>
+    <view>
+      <text class="store_name">{{item.storeName}}</text>
+      <text class="store_address">{{item.address}}</text>
+      <text class="blod_text">Type of food: </text><text>{{item.type}}</text>
+      <text class="bold_text">Delivery Time:</text><text>{{item.time}}</text>
+    </view>
+    <view>
+      <navigator url="detail/detail">View menu</navigator>
+    </view>
+  </view>
+</view>
+
+<view class="bottom_line"></view>

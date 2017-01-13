@@ -1,0 +1,33 @@
+<scroll-view scroll-y="true" bindscrolltolower="loadMore" class="content">
+  <view wx:for="{{storeList}}" class="list_item" wx:key="{{index}}">
+    <view class="store_icon" style="background-image: url({{item.src}})"></view>
+    <view class="store_info_box">
+      <view class="store_name">{{item.storeName}}</view>
+      <view class="store_address">{{item.address}}</view>
+
+      <view wx:if="{{item.minOrder != ''}}">
+        <text class="blod_text">Minimum order:</text><text> RMB {{item.minOrder}}</text>
+      </view>
+      
+      <view wx:if="{{item.deliveryFee != ''}}">
+        <text class="blod_text">Delivery Fee:</text><text> RMB {{item.deliveryFee}}</text>
+      </view>
+
+      <view class="food_type">
+        <text class="blod_text">Type of food: </text><text>{{item.foodType}}</text>
+      </view>
+      <view>
+        {{item.time}}
+      </view>
+    </view>
+    <view class="handle_box">
+      <navigator url="../menu_list/menu_list" class="menu_link">menu</navigator>
+      <view class="start_box">
+        <text wx:for="{{item.scoreList}}" wx:for-item="item2" class="start {{item2 > 0 ? 'active' : ''}}" wx:key="*this"></text>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{showLoading}}" class="loading">load more</view>
+</scroll-view>
+
+<view class="bottom_line"></view>

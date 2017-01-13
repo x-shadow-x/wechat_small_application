@@ -1,0 +1,67 @@
+<scroll-view scroll-y="true" style="height: 100%;" bindscrolltolower="loadMore" class="scroll_box">
+    <view class="menu_content {{disableScroll == true ? 'disable_scroll' : ''}}">
+        <view class="store_pic"></view>
+        <navigator url="url" class="store_info">
+            <text class="store_info_text">Store Info (cost、rating)</text>
+        </navigator>
+        <view class="time_free_box">
+            <view class="time">
+                <text class="time_icon"></text>
+                <text class="time_text">10:30~23:00</text>
+            </view>
+            <view class="send_free">
+                <text class="free_icon"></text>
+                <text class="free_text">free shipping</text>
+            </view>
+        </view>
+        <view class="nav_bar">
+            <view class="nav_item active">set meal</view>
+            <view class="nav_item">single</view>
+            <view class="nav_item">other</view>
+        </view>
+
+        <view class="list_box">
+            <view wx:for="{{menuList}}" class="list_item" wx:key="{{index}}">
+                <view class="goods_pic" style="background-image: url({{item.src}})"></view>
+                <view class="goods_info_box">
+                    <view class="goods_name">{{item.goodsName}}</view>
+                    <view class="goods_price">¥ {{item.goodsPrice}}</view>
+                    <view class="sold">sold: {{item.saleNum}}</view>
+                    <view class="score_box">
+                        <text wx:for="{{item.scoreList}}" wx:for-item="item2" class="score_icon {{item2 != '1' ? '' : 'active'}}" wx:key="{{index}}"></text>
+                    </view>
+                </view>
+                <view class="handle_box">
+                    <view class="sub" catchtap="handleSub" data-index="{{index}}" wx:if="{{item.num > 0}}"></view>
+                    <view class="num" wx:if="{{item.num > 0}}">{{item.num || 0}}</view>
+                    <view class="add" catchtap="handleAdd" data-index="{{index}}"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view wx:if="{{showLoading}}" class="loading">load more</view>
+    <view class="bottom_tab">
+        <view class="show_order_btn" catchtap="toggleOrder">
+            <view class="goods_count_box">
+                <text class="goods_count" wx:if="{{sumNum > 0}}">{{sumNum}}</text>
+            </view>
+            <view class="price_box">
+                <view class="sum_price">TotalPrice: ¥ {{totalPrice}}</view>
+                <view class="min_price">minPrice: ¥ {{minPrice}}</view>
+            </view>
+        </view>
+        <view class="ordered_btn">order</view>
+        <scroll-view scroll-y="true" class="order_list_box {{showOrder == true ? 'show' : ''}}" bindscrolltolower="lower">
+            <view wx:for="{{orderList}}" wx:key="{{index}}" class="order_item">
+                <view class="order_item_goods_name_box">
+                    <view class="goods_name">{{item.goodsName}}</view>
+                </view>
+                <view class="goods_sum_price">
+                    <text class="price_icon">¥</text>{{item.sumPrice}}
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="hover {{showHover == true ? 'show' : ''}}" catchtap="toggleOrder"></view>
+</scroll-view>

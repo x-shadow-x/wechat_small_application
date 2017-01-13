@@ -1,0 +1,41 @@
+/* pages/user/user.wxss */
+page {
+    background: #FDFCF5;
+    padding-top: 10px;
+}
+.link_item {
+    height: 32px;
+    line-height: 32px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding-left: 10px;
+    background: #fff;
+}
+
+.link_item + .link_item {
+    border-top: none;
+}
+
+.link_item:after {
+    content: '>';
+    font-weight: bold;
+    float: right;
+    height: 32px;
+    line-height: 32px;
+    color: #ccc;
+    padding-right: 10px;
+}
+
+.item_order:before,
+.item_address:before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    vertical-align: bottom;
+    background: url('../imgs/address_icon.png') center no-repeat;
+    background-size: auto 100%;
+}
+.item_order:before {
+    background-image: url('../imgs/order_icon.png')
+}

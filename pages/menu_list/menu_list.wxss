@@ -1,0 +1,307 @@
+/* pages/detail/index.wxss */
+.scroll_box {
+    padding-bottom: 50px;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.menu_content.disable_scroll {
+    height: 100%;
+    overflow: hidden;
+}
+.store_pic {
+    width: 100%;
+    padding-top: 32%;
+    background: url('../imgs/restaurant.jpg') center no-repeat;
+    background-size: 100% auto;
+}
+
+.store_info {
+    border-bottom: 1px solid #ccc;
+    display: block;
+    overflow: hidden;
+}
+.store_info_text {
+    float: left;
+    padding: 10px 0 10px 10px;
+    height: 28px;
+    line-height: 28px;
+    color: #888;
+}
+.store_info_text:before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    vertical-align: bottom;
+    background: url('../imgs/store_icon.png') center no-repeat;
+    background-size: 100% auto;
+    margin-right: 10px;
+}
+.store_info:after {
+    content: '>';
+    float: right;
+    height: 28px;
+    line-height: 28px;
+    padding: 10px 10px 10px 0;
+    color: #888;
+}
+.time_free_box {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    color: #888;
+}
+.time, .send_free{
+    display: inline-block;
+    width: 50%;
+}
+.time_icon,
+.free_icon {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    background: url('../imgs/time_icon.png') center no-repeat;
+    background-size: 80% auto;
+}
+.free_icon {
+    background-image: url('../imgs/pay_icon.png');
+}
+.time_text, .free_text{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav_bar {
+    border: 1px solid #ddd;
+    border-right: none;
+    border-left: none;
+    margin-top: 10px;
+}
+
+.nav_item {
+    display: inline-block;
+    width: 33.3%;
+    text-align: center;
+    box-sizing: border-box;
+    height: 32px;
+    line-height: 32px;
+    color: #CD0909;
+}
+
+.nav_item.active {
+    background: #DD403B;
+    color: #fff;
+}
+
+.nav_item + .nav_item {
+    border-left: 1px solid #ddd;
+}
+
+
+.list_item {
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 5px;
+}
+
+.goods_pic, .goods_info_box, .handle_box{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.goods_pic {
+    width: 15%;
+    padding-top: 15%;
+    background: url('../imgs/food1.jpg') center no-repeat;
+    background-size: 100% auto;
+}
+
+.goods_info_box {
+    width: 55%;
+    margin-left: 5%;
+    margin-right: 2%;
+}
+
+.goods_name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    width: 96%;
+}
+.goods_price, .sold {
+    display: inline-block;
+    width: 40%;
+}
+
+.sold {
+    color: #888;
+}
+
+.score_box {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.score_icon {
+    display: inline-block;
+    width: 20px;
+    height: 0;
+    padding-top: 20px;
+    margin-right: 10px;
+    background: url('../imgs/zan_empty.png') center no-repeat;
+    background-size: 100% auto;
+}
+
+.score_icon.active {
+    background-image: url('../imgs/zan_active.png');
+}
+
+.handle_box {
+    width: 23%;
+    text-align: right;
+}
+
+.sub, .add, .num {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: middle;
+}
+
+.sub, .add {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background: url('../imgs/sub.png') center no-repeat;
+    background-size: 100% auto;
+}
+
+.add {
+    background-image: url('../imgs/add.png')
+}
+
+.num {
+    margin: 0 10px;
+}
+
+.hover {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    display: none;
+}
+.hover.show {
+    display: block;
+}
+
+.bottom_tab {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    z-index: 3;
+}
+
+.show_order_btn,
+.ordered_btn {
+    display: inline-block;
+}
+
+.show_order_btn {
+    width: 70%;
+    background: #fff;
+    box-sizing: border-box;
+    height: 100%;
+    background: #DD403B;
+    vertical-align: middle;
+}
+.goods_count_box, .price_box {
+    height: 100%;
+    vertical-align: middle;
+}
+.goods_count_box {
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    background: url('../imgs/cart.png') center no-repeat;
+    background-size: auto 50%;
+    position: relative;
+}
+
+.goods_count {
+    position: absolute;
+    min-width: 10px;
+    height: 10px;
+    line-height: 10px;
+    padding: 3px;
+    border-radius: 100px;
+    background: #5A021A;
+    text-align: center;
+    font-size: 12px;
+    right: 0;
+    top: 5px;
+}
+.price_box {
+    padding-top: 5px;
+    display: inline-block;
+    line-height: 20px;
+    margin-left: 15px;
+}
+.ordered_btn {
+    width: 30%;
+    background: #CD0909 ;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.order_list_box {
+    position: absolute;
+    bottom: -260px;
+    height: 160px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    transition: bottom, .32s;
+    color: #888;
+    overflow: visible;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.order_list_box.show {
+    bottom: 100%;
+}
+
+.order_item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    overflow: hidden;
+}
+.order_item_goods_name_box {
+    float: left;
+    width: 60%;
+}
+.goods_sum_price {
+    color: #D56137;
+    font-weight: bold;
+    font-size: 16px;
+}
+.price_icon {
+    font-size: 10px;
+    font-weight: normal;
+}
+.goods_sum_price {
+    float: right;
+}

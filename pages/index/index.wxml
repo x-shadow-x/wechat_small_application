@@ -1,0 +1,14 @@
+<view class="content">
+    <form class="filter_form">
+        <picker mode="selector" range="{{areaLists}}" value="0" bindchange="listenerPickerSelected" class="select_input {{areaIndex == 0 ? 'default' : 'selected'}}" id="area">
+            <text>{{areaLists[areaIndex]}}</text>
+        </picker>
+        <picker mode="selector" range="{{buildingLists}}" value="0" bindchange="listenerPickerSelected" class="select_input {{buildingIndex == 0 ? 'default' : 'selected'}}" id="building">
+            <text class="temp">{{buildingLists[buildingIndex]}}</text>
+        </picker>
+        <picker mode="selector" range="{{fancyLists}}" value="0" bindchange="listenerPickerSelected" class="select_input {{fancyIndex == 0 ? 'default' : 'selected'}}" id="fancy">
+            <text>{{fancyLists[fancyIndex]}}</text>
+        </picker>
+        <button class="submit_btn {{isDisable == true ? 'disable' : ''}}" bindtap="clickButton" loading="{{isLoading}}" >Find me a restaurant!</button>
+    </form>
+</view>

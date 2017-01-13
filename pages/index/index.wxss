@@ -1,0 +1,42 @@
+page {
+    min-height: 100%;
+}
+
+.filter_form {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 24%;
+}
+.select_input {
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    line-height: 30px;
+    height: 30px;
+    padding: 0 5px;
+    margin-bottom: 20px;
+}
+.select_input text {
+    display:block;
+    width: 96%;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+picker.default {
+    color: #ccc;
+}
+
+picker.selected {
+    color: #333;
+}
+
+.submit_btn {
+    background: #DD403B;
+    color: #fff;
+}
+.submit_btn.disable {
+    background-color:#EF706C;
+}

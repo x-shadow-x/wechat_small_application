@@ -1,0 +1,3 @@
+<!--pages/user/user.wxml-->
+<navigator url="../my_order/my_order" class="link_item item_order">My Order</navigator>
+<navigator url="../address/address" class="link_item item_address">Address</navigator>
